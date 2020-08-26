@@ -1,0 +1,22 @@
+mtsql 실행 및 사용법 https://opentutorials.org/course/3161/19532
+
+
+스키마 = 서로 연관된 데이터들을 그룹핑해준다.
+스키마가 많아지면 어딘가에 저장되어야될텐데 그것을
+데이터베이스 서버라고 합니다.
+
+ SHOW DATABASES;
+C:\Bitnami\wampstack-7.4.9-0\mysql\bin
+환경변수에 설정했다면
+cmd창 열고 mysql -u root -p 입력후
+비밀번호치면 들어가짐ㅇㅇ mysql>
+
+
+
+SELECT * FROM topic WHERE author = 'egoing';
+autor 이 egoing 인 사람의 데이터만 출력해줘
+
+SELECT * FROM topic WHERE author = 'egoing' ORDER BY id DESC;
+
+autor이 egoing 인 사람의 데이터를 숫자가 큰것부터 보여줘
+
