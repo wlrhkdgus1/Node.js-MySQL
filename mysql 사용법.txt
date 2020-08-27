@@ -1,4 +1,4 @@
-mtsql 실행 및 사용법 https://opentutorials.org/course/3161/19532
+mysql 실행 및 사용법 https://opentutorials.org/course/3161/19532
 
 스키마 = 서로 연관된 데이터들을 그룹핑해준다.
 스키마가 많아지면 어딘가에 저장되어야될텐데 그것을
@@ -45,5 +45,16 @@ topic을 셋시킨다 description 의 내용과 title의 이름을 누구꺼를 
 DELETE
 DELETE FROM topic WHERE id = 5;
 
+JOIN 사용법
+SELECT * FROM topic LEFT JOIN author ON topic.author_id = author.id;
+id 를 통하여 전체화면 조인
+
+SELECT topic.id,title,description,created,name,profile FROM topic LEFT JOIN author ON topic.author_id = author.id;
+SELECT * 이 아닌 원하는것만 출력하여 조인
+
+SELECT topic.id AS topic_id,title,description,created,name,profile FROM topic LEFT JOIN author ON topic.author_id = author.id;
+topic의 id의 이름을 topic_id로 바꾸어 출력
 
 
+*mysql workbench 설치및 사용법 참고.*
+https://www.inflearn.com/course/database-2-mysql-%EA%B0%95%EC%A2%8C/lecture/10310?tab=curriculum
